@@ -161,13 +161,11 @@ Note: For capturing login screens, use 'rdp://' (no authentication).
     print("=" * 60)
     print()
 
-    # Ensure URL ends with @ if it contains credentials
+    # Prepare URL for ardpscan
     url = args.url
-    if not url.endswith('//') and not url.endswith('@'):
+    # If URL has credentials but no @ at the end, add it
+    if '://' in url and '@' not in url and not url.endswith('//'):
         url += '@'
-    if url.endswith('//'):
-        # For rdp:// format, we'll use target directly
-        url = url.rstrip('/')
 
     success = run_screenshot(url, target_list, output_file, args.workers, args.timeout)
 
