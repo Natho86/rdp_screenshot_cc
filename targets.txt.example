@@ -1,0 +1,22 @@
+# Example targets file
+# One target per line (IP address or hostname)
+# Lines starting with # are comments and will be ignored by the scanner
+
+# Example IP addresses
+192.168.1.100
+192.168.1.101
+192.168.1.102
+
+# Example hostnames
+server01.example.com
+rdp-server.local
+desktop-win10.corp
+
+# Example IP range (list each IP individually)
+10.0.0.50
+10.0.0.51
+10.0.0.52
+
+# You can mix IPs and hostnames
+172.16.1.10
+server-prod.internal
